@@ -1,0 +1,32 @@
+sudo chmod 666 /var/run/docker.sock
+
+<===========>
+
+service docker status
+
+docker run [OPTIONS] IMAGE [COMMAND] 
+docker run -it
+
+docker pull <image>
+
+docker build -t <image_name> <path>: создать образ из файла Dockerfile, где <path>находится каталог, содержащий файл Dockerfile.
+
+docker image ls
+
+docker run -d -p <host_port>:<container_port> --name <container_name> <image>: Запустите контейнер из образа, сопоставив порты хоста с портами контейнера.
+
+docker run --name [name] <image_name>
+
+docker container ls
+docker ps
+
+docker stop <container>
+
+docker rm <container>
+
+docker image rm <image>
+docker rmi <image>
+
+docker attach
+
+
