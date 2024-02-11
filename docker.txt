@@ -19,14 +19,19 @@ docker run --name [name] <image_name>
 
 docker container ls
 docker ps
+docker ps -aq : onli id containers
 
 docker stop <container>
 
 docker rm <container>
+docker container prune -f : delete all stoped containers
 
 docker image rm <image>
 docker rmi <image>
 
 docker attach
 
+docker inspect [id container]
 
+docker logs [id container]
+ 
