@@ -11,6 +11,8 @@ docker pull <image>
 
 docker build -t <image_name> <path>: создать образ из файла Dockerfile, где <path>находится каталог, содержащий файл Dockerfile.
 
+docker tag [image id] [name/new_name]
+
 docker image ls
 
 docker run -d -p <host_port>:<container_port> --name <container_name> <image>: Запустите контейнер из образа, сопоставив порты хоста с портами контейнера.
@@ -27,6 +29,7 @@ docker rm <container>
 docker container prune -f : delete all stoped containers
 
 docker image rm <image>
+docker system prune -a --volumes
 docker rmi <image>
 
 docker attach
@@ -35,3 +38,10 @@ docker inspect [id container]
 
 docker logs [id container]
  
+docker stats [id container]
+
+docker network create -d bridge --subnet 192.168.10.0/24 --gateway 192.168.10.1 myNet192
+docker network inspect myNet192
+docker network rm [Network]
+docker network connect [Network] [id container]
+

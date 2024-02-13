@@ -1,0 +1,17 @@
+FROM ubuntu:22.04
+
+LABEL autor=Arterg
+LABEL type=demo
+LABEL platform=Linux
+
+RUN apt-get update
+RUN apt-get install nginx -y
+
+WORKDIR /var/www/html/
+
+COPY index.html .
+
+EXPOSE 80
+
+
+CMD ["nginx","-g","daemon off;"] 

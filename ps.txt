@@ -6,3 +6,5 @@ ip route get 1.2.3.4 | awk '{print $7}'
 hostname -I
 Команда hostname -I выводит список IP-адресов, связанных с вашим хостом
 . В этом списке, обычно, присутствует и IP-адрес localhost.
+
+curl -Li [addres]

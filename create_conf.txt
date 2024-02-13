@@ -1,0 +1,16 @@
+FROM [image]
+
+LABEL autor=Arterg
+
+RUN apt-get update
+RUN apt-get install [programm] -y
+
+WORKDIR [path]
+
+COPY [path_to_file] . 
+
+EXPOSE 80
+
+CMD [command] - changeable
+ENTRYPOINT [command] - fixed
+
